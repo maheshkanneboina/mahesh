@@ -11,7 +11,7 @@ node('master')
         }
     stage('Continuous Deployment')
         {
-sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/multibranchpipeline1/webapp/target/webapp.war   ubuntu@172.31.8.124:/var/lib/tomcat8/webapps/qaenv.war'
+sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/mahesh/webapp/target/webapp.war   ubuntu@172.31.8.124:/var/lib/tomcat9/webapps/qaenv.war'
         }
     stage('Continuous Testing')
         {
@@ -19,7 +19,8 @@ sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/multibranchpipeline1/
         }
     stage('Continuous Delivery')
         {
-sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/multibranchpipeline1/webapp/target/webapp.war   ubuntu@172.31.9.40:/var/lib/tomcat9/webapps/prodenv.war'
+sh label: '', script: 'scp /home/ubuntu/.jenkins/workspace/mahesh/webapp/target/webapp.war   ubuntu@172.31.9.40:/var/lib/tomcat9/webapps/prodenv.war'
         }
 }
+
 
